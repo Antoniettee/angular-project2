@@ -1,0 +1,33 @@
+<div class="main-div">
+  <mat-card class="example-card">
+    <mat-card-header>
+      <mat-card-title >Form</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+
+      <form    class="example-form" >
+<!--        [formGroup]="editForm"-->
+        <mat-label>Name</mat-label><br>
+        <mat-form-field class="mat-form-field-fluid">
+          <input matInput  class="control" formControlName="name" name="name" placeholder="name" >
+        </mat-form-field>
+        <br><br>
+        <mat-label>Weight</mat-label><br>
+        <mat-form-field class="mat-form-field-fluid">
+          <input matInput type="text"  class="control" formControlName="weight" name="weight" placeholder="weight">
+        </mat-form-field>
+        <br><br>
+        <mat-label>Symbol</mat-label><br>
+        <mat-form-field class="mat-form-field-fluid">
+          <input matInput type="number"  class="control" formControlName="symbol" name="symbol" placeholder="symbol">
+        </mat-form-field>
+        <br><br>
+        <div class="form-group">
+          <button id="btn1" mat-raised-button color="primary" (click)="onSubmit()" type="submit">Save</button>
+          <button id="btn2" (click)="onNoClick()" mat-raised-button color="accent" tabindex="-1">Back
+          </button>
+        </div>
+      </form>
+    </mat-card-content>
+  </mat-card>
+</div>
