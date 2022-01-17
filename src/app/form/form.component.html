@@ -5,21 +5,20 @@
     </mat-card-header>
     <mat-card-content>
 
-      <form    class="example-form" >
-<!--        [formGroup]="editForm"-->
+      <form  class="example-form" [formGroup]="formForm" >
         <mat-label>Name</mat-label><br>
         <mat-form-field class="mat-form-field-fluid">
           <input matInput  class="control" formControlName="name" name="name" placeholder="name" >
         </mat-form-field>
         <br><br>
-        <mat-label>Weight</mat-label><br>
+        <mat-label>Lastname</mat-label><br>
         <mat-form-field class="mat-form-field-fluid">
-          <input matInput type="text"  class="control" formControlName="weight" name="weight" placeholder="weight">
+          <input matInput type="text"  class="control" formControlName="lastname"  name="lastname" placeholder="lastname">
         </mat-form-field>
         <br><br>
-        <mat-label>Symbol</mat-label><br>
+        <mat-label>Age</mat-label><br>
         <mat-form-field class="mat-form-field-fluid">
-          <input matInput type="number"  class="control" formControlName="symbol" name="symbol" placeholder="symbol">
+          <input matInput type="number"  class="control" formControlName="age" name="age" placeholder="age">
         </mat-form-field>
         <br><br>
         <div class="form-group">
