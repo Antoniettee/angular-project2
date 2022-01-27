@@ -1,16 +1,29 @@
-<mat-toolbar color="primary">
+<mat-toolbar>
   <mat-toolbar-row>
     <button mat-icon-button>
       <mat-icon (click)="sidenav.toggle();">menu</mat-icon>
     </button>
     <h1><a routerLink="">Home Page</a></h1>
-    <h1><a class="login" routerLink="/login">Login</a></h1>
   </mat-toolbar-row>
 </mat-toolbar>
 <mat-sidenav-container>
   <mat-sidenav #sidenav mode="side">
     <mat-nav-list>
       <a mat-list-item routerLink="/table">Table</a>
+    </mat-nav-list>
+    <mat-nav-list>
+      <a mat-list-item routerLink="/register">Register</a>
+    </mat-nav-list>
+<!--    <mat-nav-list>-->
+<!--      <a mat-list-item routerLink="/login">Login</a>-->
+<!--    </mat-nav-list>-->
+    <mat-nav-list>
+        <div *ngIf="isUserLoggedIn; else isLogOut">
+          <a mat-list-item  routerLink="/logout">Logout</a>
+        </div>
+        <ng-template #isLogOut>
+          <a class="nav-link" routerLink="/login">Login</a>
+        </ng-template>
     </mat-nav-list>
 <!--    <mat-nav-list>-->
 <!--      <a mat-list-item routerLink="/login">Login</a>-->

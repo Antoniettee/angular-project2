@@ -16,11 +16,15 @@ import {MatIconModule} from "@angular/material/icon";
 import {AppRoutingModule} from "./app-routing.module";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import { HomepageComponent } from './homepage/homepage.component';
-import {HttpClient, HttpClientModule} from "@angular/common/http";
+import {HttpClientModule} from "@angular/common/http";
 import { DialogComponent } from './dialog/dialog.component';
 import {MatDialogModule} from "@angular/material/dialog";
 import {TableModule} from "./table/table.module";
 import { LoginComponent } from './login/login.component';
+import { LogoutComponent } from './logout/logout.component';
+import { AboutComponent } from './about/about.component';
+import { RegisterComponent } from './register/register.component';
+import { AuthModule} from "@auth0/auth0-angular";
 
 
 @NgModule({
@@ -29,7 +33,10 @@ import { LoginComponent } from './login/login.component';
     NavbarComponent,
     HomepageComponent,
     DialogComponent,
-    LoginComponent
+    LoginComponent,
+    LogoutComponent,
+    AboutComponent,
+    RegisterComponent
   ],
     imports: [
         BrowserModule,
@@ -48,7 +55,8 @@ import { LoginComponent } from './login/login.component';
         BrowserAnimationsModule,
         HttpClientModule,
         MatDialogModule,
-        TableModule
+        TableModule,
+        AuthModule
     ],
   providers: [],
   bootstrap: [AppComponent]

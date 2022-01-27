@@ -1,0 +1,147 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.container {
+  background: #fff8;
+  margin: 0 auto;
+  width: 80%;
+  min-width: 25rem;
+  max-width: 62.5rem;
+  padding: 2em;
+  border-radius: 1em;
+  box-shadow: 0 0.125em 0.25em #0003, 0 0.6em 1.325em #0003,
+  0 1.125em 1.6em -0.125em #0002;
+}
+
+.services {
+  text-align: center;
+  color: white;
+  font-size: 3em;
+  margin-bottom: 1em;
+}
+
+.flow {
+  display: flex;
+  gap: 1em;
+  flex-wrap: wrap;
+}
+
+.flow > * {
+  flex-grow: 1;
+  flex-basis: calc((45rem - 100%) * 999);
+}
+
+.card {
+  margin: auto;
+  max-width: 35rem;
+  padding: 1em;
+  background-color: #fff;
+  border-radius: 0.35em;
+  box-shadow: 0 0.125em 0.25em #0003, 0 0.6em 1.325em #0003,
+  0 1.125em 1.6em -0.125em #0002;
+  transition: transform 200ms ease;
+  background-image: url("https://c4.wallpaperflare.com/wallpaper/396/379/630/stylish-bmw-135i-wallpaper-preview.jpg");
+}
+
+.card:hover {
+  transform: scale(1.03);
+}
+
+.card-flow {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-grow: 9999;
+}
+
+.icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 0;
+  font-size: 3rem;
+  -webkit-text-stroke: 1.5px #ffffff;
+  color: #0000;
+}
+
+.fab:hover {
+  animation: swing 500ms cubic-bezier(0.5, 0.2, 0.59, 1.1);
+}
+
+@keyframes swing {
+  0% {
+    transform: rotate(-5deg);
+  }
+  20% {
+    transform: rotate(5deg);
+  }
+  35% {
+    transform: rotate(-15deg);
+  }
+  50% {
+    transform: rotate(15deg);
+  }
+  70% {
+    transform: rotate(-20deg);
+  }
+  85% {
+    transform: rotate(20deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.card-body {
+  align-items: center;
+  margin: 0 auto;
+  display: flex;
+  max-width: 25rem;
+  flex-direction: column;
+}
+
+.card-title {
+  font-size: clamp(1.6rem, 2.8vw, 2rem);
+  line-height: 1.6;
+  margin-block: 0.5rem 1rem;
+  color: white;
+}
+
+.card-text {
+  font-size: 1.125rem;
+  font-style: italic;
+  text-align: center;
+  color: #ffffff;
+  max-width: 35ch;
+}
+
+.btn {
+  display: inline-flex;
+  border: none;
+  background: #090a0a;
+  margin: 1em 0;
+  padding: 0.5em 1.125em;
+  border-radius: 0.35em;
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  box-shadow: 0 0.6em 1.125em #0007;
+}
+
+.btn:active {
+  box-shadow: 0 0.125em 0.5em #0007;
+}

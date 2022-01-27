@@ -6,12 +6,14 @@ import {MAT_DIALOG_DATA, MatDialogRef} from "@angular/material/dialog";
 import {FormControl, FormGroup, Validators} from "@angular/forms";
 import {MatSnackBar} from "@angular/material/snack-bar";
 
+
 @Component({
   selector: 'app-form',
   templateUrl: './form.component.html',
   styleUrls: ['./form.component.css']
 })
 export class FormComponent implements OnInit {
+  submitted = false;
   tableModel= new Table('','','',0)
    id:number = Number();
 
@@ -23,9 +25,9 @@ export class FormComponent implements OnInit {
               @Inject(MAT_DIALOG_DATA) public data: any,) { }
 
   formForm = new FormGroup({
-    name: new FormControl('', [Validators.required, Validators.maxLength(5)]),
-    lastname: new FormControl('', [Validators.required, Validators.maxLength(5)]),
-    age: new FormControl('', [Validators.required, Validators.maxLength(5)]),
+    name: new FormControl('', [Validators.required]),
+    lastname: new FormControl('', [Validators.required]),
+    age: new FormControl('', [Validators.required]),
   })
 
   ngOnInit(): void {
@@ -38,6 +40,9 @@ export class FormComponent implements OnInit {
       })
     }
   }
+  // convenience getter for easy access to form fields
+  // get f() { return this.loginForm.controls; }
+
 
   onSubmit() {
     if (this.id) {
@@ -73,6 +78,14 @@ export class FormComponent implements OnInit {
             this.refresh();
           })
     }
+  //   this.submitted = true;
+  //
+  //   // stop here if form is invalid
+  //   if (this.loginForm.invalid) {
+  //     return;
+  //   }
+  // console.log(this.loginForm.value);
+  //   alert('SUCCESS!! :-)\n\n' + JSON.stringify(this.loginForm.value))
   }
 
   onNoClick() {

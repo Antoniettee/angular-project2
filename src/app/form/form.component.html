@@ -8,21 +8,21 @@
       <form  class="example-form" [formGroup]="formForm" >
         <mat-label>Name</mat-label><br>
         <mat-form-field class="mat-form-field-fluid">
-          <input matInput  class="control" formControlName="name" name="name" placeholder="name" >
+          <input matInput required class="control" formControlName="name" name="name" placeholder="name" >
         </mat-form-field>
         <br><br>
         <mat-label>Lastname</mat-label><br>
         <mat-form-field class="mat-form-field-fluid">
-          <input matInput type="text"  class="control" formControlName="lastname"  name="lastname" placeholder="lastname">
+          <input matInput required type="text"  class="control" formControlName="lastname"  name="lastname" placeholder="lastname">
         </mat-form-field>
         <br><br>
         <mat-label>Age</mat-label><br>
         <mat-form-field class="mat-form-field-fluid">
-          <input matInput type="number"  class="control" formControlName="age" name="age" placeholder="age">
+          <input matInput required type="number"  class="control" formControlName="age" name="age" placeholder="age">
         </mat-form-field>
         <br><br>
         <div class="form-group">
-          <button id="btn1" mat-raised-button color="primary" (click)="onSubmit()" type="submit">Save</button>
+          <button id="btn1" [disabled]="!formForm.valid" mat-raised-button color="primary" (click)="onSubmit()" type="submit">Save</button>
           <button id="btn2" (click)="onNoClick()" mat-raised-button color="accent" tabindex="-1">Back
           </button>
         </div>
